@@ -1,15 +1,17 @@
 package models
 
 type Artist struct {
+	ID int
 	Name string
 	Members []string
-	Albums []Album
+	AlbumsIDs []int
 }
 
-func NewArtist(name string, members []string, albums []Album) *Artist {
+func NewArtist(id int, name string, members []string, albums []int) *Artist {
 	return &Artist{
+		ID: id,
 		Name: name,
 		Members: members,
-		Albums: albums,
+		AlbumsIDs: albums,
 	}
 }

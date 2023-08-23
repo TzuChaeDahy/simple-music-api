@@ -3,19 +3,21 @@ package models
 import "time"
 
 type Song struct {
+	ID int
 	Name string
-	Artist Artist
-	Feat []Artist
+	ArtistID int
+	FeatArtistID []int
 	Duration time.Duration
-	Album Album
+	AlbumID int
 }
 
-func NewSong(name string, artist Artist, feat []Artist, duration time.Duration, album Album) *Song {
+func NewSong(id int, name string, artistID int, featArtistID []int, duration time.Duration, albumID int) *Song {
 	return &Song{
+		ID: id,
 		Name: name,
-		Artist: artist,
-		Feat: feat,
+		ArtistID: artistID,
+		FeatArtistID: featArtistID,
 		Duration: duration,
-		Album: album,
+		AlbumID: albumID,
 	}
 }
