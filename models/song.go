@@ -1,23 +1,27 @@
 package models
 
-import "time"
+import (
+	"time"
+
+	"github.com/google/uuid"
+)
 
 type Song struct {
-	ID int
-	Name string
-	ArtistID int
-	FeatArtistID []int
-	Duration time.Duration
-	AlbumID int
+	ID           uuid.UUID
+	Name         string
+	ArtistID     uuid.UUID
+	FeatArtistID []uuid.UUID
+	Duration     time.Duration
+	AlbumID      uuid.UUID
 }
 
-func NewSong(id int, name string, artistID int, featArtistID []int, duration time.Duration, albumID int) *Song {
+func NewSong(id uuid.UUID, name string, artistID uuid.UUID, featArtistID []uuid.UUID, duration time.Duration, albumID uuid.UUID) *Song {
 	return &Song{
-		ID: id,
-		Name: name,
-		ArtistID: artistID,
+		ID:           id,
+		Name:         name,
+		ArtistID:     artistID,
 		FeatArtistID: featArtistID,
-		Duration: duration,
-		AlbumID: albumID,
+		Duration:     duration,
+		AlbumID:      albumID,
 	}
 }

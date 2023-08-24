@@ -1,11 +1,13 @@
 package models
 
+import "github.com/google/uuid"
+
 type Album struct {
-	ID int
+	ID uuid.UUID
 	Name string
 }
 
-func NewAlbum(id int, name string) *Album {
+func NewAlbum(id uuid.UUID, name string) *Album {
 	return &Album{
 		ID: id,
 		Name: name,
