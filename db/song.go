@@ -3,7 +3,6 @@ package db
 import (
 	"learn_api_test/models"
 	"time"
-
 	"github.com/google/uuid"
 )
 

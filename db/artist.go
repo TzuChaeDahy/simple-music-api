@@ -6,7 +6,7 @@ import (
 	"github.com/google/uuid"
 )
 
-var artists = []models.Artist{
+var Artists = []models.Artist{
 	{
 		ID: uuid.MustParse("5da750ed-df00-46f1-9845-531a5b2ca597"),
 		Name: "Kanye West",

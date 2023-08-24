@@ -7,7 +7,7 @@ import (
 )
 
 
-var albums = []models.Album{
+var Albums = []models.Album{
 	{
 		ID: uuid.MustParse("108bca2e-77c7-4120-82bf-aae12884e3ec"),
 		Name: "donda",
